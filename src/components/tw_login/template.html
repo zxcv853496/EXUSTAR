@@ -1,0 +1,45 @@
+<div class="login">
+    <div class="container">
+        <div class="icon">
+            <i @click='closeLogin' class="fas fa-times"></i>
+        </div>
+        <h3>會員登入</h3>
+        <div class="content">
+            <p>
+                帳號
+                <span>(手機號碼)</span>
+            </p>
+            <input class="input" type="text" 
+            placeholder="請輸入手機號碼">
+            <p>
+                密碼
+            </p>
+            <input class="input" type="text"
+            placeholder="請輸入密碼">
+            <div class="sub-container">
+                <div class="check-container">
+                    <input  type="checkbox">
+                    <span>保持登入狀態</span>
+                </div>
+                <router-link to="/Forget">
+                    忘記密碼？
+                </router-link>
+            </div>
+            <router-link class="btn-login a" to="/MemberCenter">
+                登入
+            </router-link>
+            <div class="hr-container">
+                <span>or</span>
+                <div class="line"></div>
+            </div>
+            <button class="btn-login fb">
+                FACEBOOK帳號登入
+            </button>
+            <div class="add-container">
+                <span>不是會員？</span>                <router-link to="/register">
+                        加入我們
+                </router-link>
+            </div>
+        </div>
+    </div>
+</div>

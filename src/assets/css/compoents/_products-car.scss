@@ -1,0 +1,142 @@
+.products-car{
+    width: 95%;
+    margin: 0 auto;
+    .owl-carousel{
+        position: relative;
+        .owl-nav{
+            .owl-prev{
+                position: absolute;
+                top: 35%;
+                left: 15px;
+                color: transparent;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                transition: all .3s;
+                &::before{
+                    font-family: "Font Awesome 5 Free"; 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-weight: 900; 
+                    content: "\f053";
+                    font-size: 14px;
+                    color: black;
+                }
+                &:hover{
+                    background-color: rgb(0, 0, 0);
+                    color: transparent;
+                    &::before{
+                        color: white;
+                    }
+                }
+                @media (max-width:650px) {
+                    top: 20%;
+                }
+                @media (max-width:576px) {
+                    top: 35%;
+                    left: 23px;
+                }
+            }
+            .owl-next{
+                border-radius: 50%;
+                position: absolute;
+                top: 35%;
+                right: 40px;
+                color: transparent;
+                background-color: rgb(255, 255, 255);
+                width: 40px;
+                height: 40px;
+                transition: all .3s;
+                &::before{
+                    font-family: "Font Awesome 5 Free"; 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-weight: 900; 
+                    content: "\f054";
+                    font-size: 14px;
+                    color: black;
+                }
+                &:hover{
+                    background-color: rgb(0, 0, 0);
+                    color: transparent;
+                    &::before{
+                        color: white;
+                    }
+                }
+                @media (max-width:650px) {
+                    top: 20%;
+                }
+                @media (max-width:576px) {
+                    top: 35%;
+                    right: 23px;
+                }
+            }
+        }
+    }
+    h3{
+        margin: 50px 0;
+        font-weight: normal;
+        font-size: 25px;
+    }
+    .owl-item{
+        .container{
+            .img-container{
+                position: relative;
+                width: 90%;
+                padding: 35px 20px;
+                background-color: #f3f3f3;
+                .icon{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    display: flex;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    .icon-content{
+                        border: 2px solid 
+                        #d7d7d7;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        >img{
+                            width: auto;
+                        }
+                        &:nth-child(1){
+                            border-right: none;
+                        }
+                        @media (max-width:768px) {
+                            width: 35px;
+                            height: 35px;
+                        }
+                    }
+                }
+                @media (max-width:450px) {
+                    width: auto;
+                }
+            }
+            .content{
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                span{
+                    font-size: 18px;
+                }
+            }
+            .description{
+                color: #666666;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.page{
+    width: 70%;
+    margin: 0 auto;
+    >.container{
+        margin: 15px 0;
+        a{
+            font-size: 22px;
+            color: #969696;
+            font-weight: 300;
+        }
+        span{
+            font-size: 22px;
+            color: #969696;
+            font-weight: 300; 
+        }
+    }
+    >.title{
+        margin-top: 50px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    hr{
+        border: 1px solid #c7c7c7;
+    }
+    @media (max-width:576px) {
+        width: 85%;
+    }
+}

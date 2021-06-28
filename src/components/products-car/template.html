@@ -1,0 +1,56 @@
+<div class="products-car" >
+    <div class="products-car-container">
+        <h3>
+            自行車系列
+        </h3>
+        <carousel loop :dots=false autoplay :items=item>
+            <div class="container" v-for="item in main_data.bicycle_data">
+                <div class="img-container">
+                    <img :src='item.img' alt="">
+                    <div class="icon">
+                        <div class="icon-content">
+                            <img src="../../../public/img/producr-love.png" alt="">
+                        </div>
+                        <div class="icon-content">
+                            <img src="../../../public/img/product-shop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span>{{ item.content }}</span>
+                    <span>{{ item.price }}</span>
+                </div>
+                <div class="description">
+                    {{ item.description }}
+                </div>
+            </div>
+        </carousel>
+    </div>
+    <div class="products-car-container">
+        <h3>
+            摩托車系列
+        </h3>
+        <carousel loop nav  :dots=false autoplay :items=item>
+            <div class="container" v-for="item in main_data.motorcycle_data">
+                <div class="img-container">
+                    <img :src='item.img' alt="">
+                    <div class="icon">
+                        <div class="icon-content">
+                            <img src="../../../public/img/producr-love.png" alt="">
+                        </div>
+                        <div class="icon-content">
+                            <img src="../../../public/img/product-shop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span>{{ item.content }}</span>
+                    <span>{{ item.price }}</span>
+                </div>
+                <div class="description">
+                    {{ item.description }}
+                </div>
+            </div>
+        </carousel>
+    </div>
+</div>

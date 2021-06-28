@@ -1,0 +1,42 @@
+.fixedshop{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 5;
+    width: 50px;
+    .container{
+        position: relative;
+        >span{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%,-50%);  
+            color: white;
+            background-color: red;
+            padding: 3px 10px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .sub-container{
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #EEEEEE;
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 0;
+                &:hover{
+                    cursor: pointer;
+                }
+                &:nth-child(1){
+                    background-color: #EEEEEE;
+                }
+                &:nth-child(2){
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+
+}

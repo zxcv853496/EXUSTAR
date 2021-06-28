@@ -1,0 +1,8 @@
+<div class="swiper">
+    <carousel :items=1 :nav=false autoplay loop>
+        <div class="img-container"            v-for='item in main_data'>
+            <img 
+            :src="item.img" alt="">
+        </div>
+    </carousel>
+</div>

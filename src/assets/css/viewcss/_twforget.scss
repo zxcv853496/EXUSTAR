@@ -1,0 +1,185 @@
+.forget{
+    .main-container{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 40px;
+        @media (max-width:800px) {
+            width: 85%;
+        }
+        .content-container{
+            padding: 40px 100px;
+            background-color: #f8f8f8;
+            @media (max-width:1200px) {
+                padding: 20px 50px;
+            }
+            @media (max-width:550px) {
+                padding: 20px 20px;
+            }
+            .top-title{
+                display: flex;
+                align-items: center;
+                .canvas{
+                    width: .8rem;
+                    height: .8rem;
+                    background-color: rgb(37, 37, 37);
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                p{
+                    color: #777777;
+                }
+            }
+            .content{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0;
+                flex-wrap: wrap;
+                .title{
+                    width: 10%;
+                    @media (max-width:1500px) {
+                        width: 15%;
+                    }
+                    @media (max-width:1200px) {
+                        width: 20%;
+                    }
+                    @media (max-width:800px) {
+                        width: 100%;
+                    }
+                }
+                .after{
+                    color: red;
+                }
+                .input{
+                    border: 1px solid rgb(219, 219, 219);
+                    padding: 5px;
+                    height: 45px;
+                    margin: 0 10px;
+                    flex-grow: 1;
+                    margin-right: 0;
+                }
+                button{
+                    height: 45px;
+                    color: white;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    background-color: #676767;
+                }
+                .a{
+                    cursor: pointer;
+                    color: red;
+                    text-decoration: underline red;
+                }
+                select{
+                    margin-left: 10px;
+                    height: 45px;
+                    border: 1px solid rgb(219, 219, 219);
+                    &:nth-child(4){
+                        width: 100px;
+                    }
+
+                }
+                &.one{
+                    button{
+                        @media (max-width:620px) {
+                            margin-top: 5px;
+                            flex-grow: 1;
+                        }
+                        @media (max-width:414px) {
+                            margin-top: 0;
+                        }
+                        @media (max-width:375px) {
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                }
+                &.two{
+                    span:nth-child(2){
+                        margin-left: 10px;
+                    }
+                }
+                &.address{
+                    @media (max-width:1000px) {
+                        input{
+                            margin: 0;
+                            margin-top: 5px;
+                        }
+                        .select-container{
+                            flex-grow: 1;
+                            display: flex;
+                            select:nth-child(3){
+                                flex-grow: 1;
+                            }
+                        }
+
+                    }
+                    @media (max-width:414px) {
+                        input{
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                &.number{
+                    .sub-container{
+                        display: flex;
+                        flex-grow: 1;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                    .number{
+                        height: 100%;
+                        @media (max-width:440px) {
+                            margin-left: 10px;
+                        }
+                    }
+                    button{
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+                    @media (max-width:800px) {
+                        input{
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+                    }
+                    @media (max-width:414px) {
+                        input{
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+                        .number{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .check{
+                margin-top: 30px;
+                margin-bottom: 20px;
+            a{
+                display: block;
+                margin: 0 auto;
+                width: 200px;
+                height: 50px;
+                padding: 10px 5px;
+                border-radius: 5px;
+                background-color: white;
+                border: 1px solid #444444;
+                cursor: pointer;
+                color: black;
+                text-align: center;
+                &:hover{
+                    background-color: #444444;
+                    color: white;
+                }
+            }
+        }
+    }   
+}

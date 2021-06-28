@@ -1,0 +1,89 @@
+.membercenter{
+    .dn{
+        display: none;
+    }
+    .main-container{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:576px) {
+            width: 85%;
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .left{
+            width: 20%;
+            .content-container{
+                margin-top: 20px;
+                .content{
+                    font-size: 18px;
+                    padding: 10px 20px;
+                    border: 1px solid #d6d6d6;
+                    cursor: pointer;
+                    border-top: none;
+                    &:nth-child(1){
+                        border-top: 1px solid #d6d6d6;
+                    }
+                    &.active{
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+        }
+        .right{
+            width: 75%;
+            hr{
+                border: none;
+                height: 1px;
+                background-color: #d1d1d1;
+                margin: 20px 0;
+            }
+            .content-container{
+                font-size: 18px;
+                .content{
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        width: 15%;
+                    }
+                    >span:nth-child(1){
+                        color: red;
+                        width: auto;
+                    }
+                    label{
+                    }
+                    &.connection{
+                        label{
+                            background-color: #f6f6f6;
+                            flex-grow: 1;
+                            padding: 10px;
+                            border: 1px solid #e5e5e5;
+                        }
+                    }
+                    &.radio{
+                        .radio-container{
+                            span{
+                                margin-right: 10px;
+                                position: relative;
+                                padding-left: 15px;
+                                user-select: none;
+                                input{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0%;
+                                    width: 100%;
+                                    transform: translate(-40%,-50%);
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

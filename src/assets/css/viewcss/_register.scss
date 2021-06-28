@@ -1,0 +1,66 @@
+.register{
+    .main-container{
+        width: 70%;
+        margin: 0 auto;
+        @media (max-width:576px) {
+            width: 85%;
+        }
+        >p{
+            margin: 40px 0;
+            text-align: center;
+        }
+        .content{
+            border: 1px solid #dfdfdf8c;
+            padding: 30px;
+            line-height: 30px;
+            overflow: scroll;
+            height: 700px;
+            @media (max-width:768px) {
+                height: 500px;
+            }
+            @media (max-width:414px) {
+                height: 350px;
+            }
+        }
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 40px;
+            a{
+                width: 200px;
+                height: 50px;
+                padding: 10px 5px;
+                border-radius: 5px;
+                background-color: white;
+                border: 1px solid #444444;
+                cursor: pointer;
+                color: black;
+                text-align: center;
+                &:hover{
+                    background-color: #444444;
+                    color: white;
+                }
+            }
+            @media (max-width:1200px) {
+                width: 70%;
+            }
+            @media (max-width:992px) {
+                width: 90%;
+            }
+            @media (max-width:768px) {
+                a{
+                    width: 150px;
+                    height: auto;
+                }
+            }
+            @media (max-width:576px) {
+                a{
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

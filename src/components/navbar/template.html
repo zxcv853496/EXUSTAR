@@ -1,0 +1,198 @@
+<div class="navbar">
+    <div class="top">
+        <div class="container">
+            <router-link to="/dealer">
+                經銷商
+            </router-link>
+            <span>
+                |
+            </span>
+            <router-link to="/shopmanual">
+                購物說明
+            </router-link>
+            <span>
+                |
+            </span>
+            <button @click="activeLogin">
+                登入
+            </button>
+        </div>
+    </div>
+    <nav class="nav" 
+    :class="{fixed:active}">
+        <div class="img-container">
+            <router-link to="/">
+                <img src="../../../public/img/logo-exu.png" alt="">
+            </router-link>
+        </div>
+        <!-- mobile -->
+        <div class="mid-container" :class="mb_menu" v-if="mb_menu.mb">
+            <div class="cover" @click="mbMenuActive"></div>
+            <div class="content-container"
+            :class="{active:mb_menu.mb_active}">
+                <div class="sub-content-container"
+                :class="{tran:sub_content}">
+                    <div class="btn-container">
+                        <button @click="activeLogin">
+                            登入
+                        </button>
+                    </div>
+                    <hr>
+                    <!-- QQ -->
+                    <div class="sub-sub-container">
+                        <div class="content" v-for="(item,item_index) in main_data" :key="item.index" @click.self="mobileChangActive(item_index) ; subContentMove()"
+                            :class="{active: activeindex === item_index}">
+                            <span
+                            @click.self="mobileChangActive(item_index) ; subContentMove()">
+                                {{ item.title }} 
+                            </span>
+                            <span
+                            @click.self="mobileChangActive(item_index) ; subContentMove()">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <div class="list" :class="{active: activeindex === item_index , next:sub_sub_content}">
+                                <div class="main-list-container">
+
+                                <p class="back"
+                                @click="closeSubContentMove">
+                                    <span><i class="fas fa-chevron-left"></i>
+                                    </span>
+                                     全部
+                                </p>
+                                <p class="title">{{ item.title }}</p>
+                                    <div class="list-container">
+                                        <div class="list-content" v-for="(list,list_index) in item.list" :key="list.index"
+                                        @click.self="changList(list_index)">
+                                            <p @click.self="changList(list_index)">{{list.title}}</p>
+                                            <span @click.self="chanList(list_index)">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </span>
+                                            <div class="a-content"
+                                            :class="{active:activelist === list_index}">
+                                                <div class="a-content-container">
+                                                    <p class="back"
+                                                     @click.self="closeSubSubContent()">
+                                                        <i @click.self="closeSubSubContent()" class="fas fa-chevron-left"></i>
+                                                        返回
+                                                    </p>
+                                                    <p class="title">
+                                                        {{list.title}}
+                                                    </p>
+                                                    <router-link to="/" class="sub-content" v-for="list_content in list.content" :key="list_content.index"">
+                                                        {{ list_content }}
+                                                    </router-link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-container">
+                        <div class="a-container">
+                            <router-link to="/">
+                                最新消息
+                            </router-link>
+                            <router-link to="/">
+                                關於我們
+                            </router-link>
+                            <router-link to="/">
+                                尺寸表
+                            </router-link>
+                            <router-link to="/">
+                                客服中心
+                            </router-link>
+                            <router-link to="/">
+                                常見問題
+                            </router-link>
+                        </div>
+                        <div class="icon-flow-container">
+                            <div class="img-container">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="img-container">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="img-container">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="img-container">
+                                <i class="fab fa-instagram"></i>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- pc -->
+
+        <div class="mid-container"
+        v-else
+        :class="mb_menu">
+        <div class="cover"
+        @click="mbMenuActive"></div>
+            <div class="content"
+            v-for="(item,item_index) in main_data"
+            :key="item.index"
+            @mouseover="changActive(item_index)"
+            @mouseleave="leaveActive"
+            :class="{active: activeindex === item_index}">
+                <span>
+                    {{ item.title }}
+                </span>
+                <div class="list"
+                :class="{active: activeindex === item_index}">
+                    <div class="list-container">
+                        <div class="list-conten"
+                        v-for="list in item.list"
+                        :key="list.index">
+                            <p class="title">{{list.title}}</p>
+                            <div class="a-content">
+                                <router-link to="/"
+                                class="sub-content"
+                                v-for="list_content in list.content"
+                                :key="list_content.index">
+                                    {{ list_content }}
+                                </router-link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="btn-container"
+            :class={active:input_active}>
+                <button @click=inputOpen()>
+                    <img src="../../../public/img/nav_icon-1.png" alt="">
+                </button>
+                <input 
+                placeholder="輸入關鍵字" 
+                type="text"
+                class="scratch"
+                :class={active:input_active}>  
+            </div>
+            <div class="content">
+                <a href="#">
+                    <img src="../../../public/img/nav_icon-2.png" alt="">
+                </a> 
+            </div>
+            <div class="content">
+                <a href="#">
+                    <img src="../../../public/img/nav_icon-3.png" alt="">
+                </a>
+            </div>
+            <div class="mb-menu"
+            @click="mbMenuActive">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="list"
+    :class="{active:hove_1}">
+
+    </div>
+</div>

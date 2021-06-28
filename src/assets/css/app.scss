@@ -1,0 +1,24 @@
+@import './base/base';
+
+
+//compoents
+@import './compoents/fixedshop';
+@import './compoents/index';
+@import './compoents/navbar';
+@import './compoents/home';
+@import './compoents/swiper';
+@import './compoents/products-car';
+@import './compoents/footer';
+@import './compoents/pagenationtop';
+@import './compoents/login';
+
+//view
+@import './viewcss/dealer';
+@import './viewcss/shopmanual';
+@import './viewcss/register';
+@import './viewcss/creatmember';
+@import './viewcss/twforget';
+@import './viewcss/membercenter';
+
+//pagenation
+@import './compoents/pagenationtopimg';

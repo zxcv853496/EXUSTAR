@@ -1,0 +1,250 @@
+<div class="footer">
+    <div class="section5">
+      <img src="../../../public/img/bottom-banner.jpg" alt="">
+    </div>
+    <div class="bottom-container">
+        <div class="container"
+        v-if="pc">
+            <div class="content">
+                <p class="title">獲取 EXUSTAR 的新聞和優惠</p>
+                <div class="btn-container">
+                    <input type="text" placeholder="電子郵件地址">
+                    <button>訂閱</button>
+                </div>
+                <div class="qrcode-container">
+                    <img src="../../../public/img/footer-code-1.jpg" alt="">
+                    <img src="../../../public/img/footer-code-2.jpg" alt="">
+                </div>
+                <div class="a-container">
+                    <a href="#">
+                        尺寸表
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        條款及細則
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        隱私政策
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        質量方針
+                    </a>
+                </div>
+                <p class="copy">
+                    台灣  Copyright &copy 2021 Exustar Enterprise Co. Ltd. 
+                </p>
+            </div>
+            <div class="content">
+                <p class="title">
+                    更多的
+                </p>
+                <router-link to="/">
+                    我的帳戶
+                </router-link>
+                <router-link to="/">
+                    尺寸表
+                </router-link>
+                <router-link to="/">
+                    經銷商
+                </router-link>
+                <router-link to="/">
+                    隱私政策
+                </router-link>
+            </div>
+            <div class="content">
+                <p class="title">
+                    客戶服務
+                </p>
+                <router-link to="/">
+                    聯繫我們
+                </router-link>
+                <router-link to="/">
+                    訂單狀態
+                </router-link>
+                <router-link to="/">
+                    送貨方式
+                </router-link>
+                <router-link to="/">
+                    隱私政策
+                </router-link>
+                <router-link to="/">
+                    退換
+                </router-link>
+            </div>
+            <div class="content">
+                <p class="title">
+                    EXUSTAR
+                </p>
+                <router-link to="/">
+                    關於我們
+                </router-link>
+                <router-link to="/">
+                    尺寸表
+                </router-link>
+                <router-link to="/">
+                    最新消息
+                </router-link>
+                <router-link to="/">
+                    客服中心
+                </router-link>
+                <router-link to="/">
+                    常見問題
+                </router-link>
+            </div>
+            <div class="content row">
+                <p class="title">
+                    跟著我們
+                </p>
+                <img src="../../../public/img/footer_icon-1.png" alt="">
+                <img src="../../../public/img/footer_icon-2.png" alt="">
+                <img src="../../../public/img/footer_icon-3.png" alt="">
+                <img src="../../../public/img/footer_icon-4.png" alt="">
+            </div>
+            <div class="visa">
+                <img src="../../../public/img/footer_icon-5.jpg" alt="">
+                <img src="../../../public/img/footer_icon-6.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- mobile -->
+
+        <div class="container"
+        v-else>
+            <div class="content">
+                <p class="title">獲取 EXUSTAR 的新聞和優惠</p>
+                <div class="btn-container">
+                    <input type="text" placeholder="電子郵件地址">
+                    <button>訂閱</button>
+                </div>
+                <div class="qrcode-container">
+                    <img src="../../../public/img/footer-code-1.jpg" alt="">
+                    <img src="../../../public/img/footer-code-2.jpg" alt="">
+                </div>
+                <div class="a-container">
+                    <a href="#">
+                        尺寸表
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        條款及細則
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        隱私政策
+                    </a>
+                    <span>
+                        |
+                    </span>
+                    <a href="#">
+                        質量方針
+                    </a>
+                </div>
+            </div>
+            <div class="sub-container">
+                <div class="content">
+                    <p class="title" @click="openContent(0)">
+                        更多的
+                        <span
+                        :class="{active: !rotate[0]}"><i class="fas fa-plus"></i></span>
+                    </p>
+                    <transition name="fade">
+                        <div class="router-container"
+                        v-if="footer[0].show">
+                            <router-link to="/">
+                                我的帳戶
+                            </router-link>
+                            <router-link to="/">
+                                尺寸表
+                            </router-link>
+                            <router-link to="/">
+                                經銷商
+                            </router-link>
+                            <router-link to="/">
+                                隱私政策
+                            </router-link>
+                        </div>
+                    </transition>
+                </div>
+                <div class="content">
+                    <p class="title" @click="openContent(1)">
+                        客戶服務
+                        <span                        :class="{active: !rotate[1]}"><i class="fas fa-plus"></i></span>
+                    </p>
+                    <transition name="fade">
+                        <div class="router-container" v-if="footer[1].show">
+                            <router-link to="/">
+                                聯繫我們
+                            </router-link>
+                            <router-link to="/">
+                                訂單狀態
+                            </router-link>
+                            <router-link to="/">
+                                送貨方式
+                            </router-link>
+                            <router-link to="/">
+                                隱私政策
+                            </router-link>
+                            <router-link to="/">
+                                退換
+                            </router-link>
+                        </div>
+                    </transition>
+                </div>
+                <div class="content">
+                    <p class="title" @click="openContent(2)">
+                        EXUSTAR
+                        <span                        :class="{active: !rotate[2]}">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </p>
+                    <transition name="fade">
+                        <div class="router-container" v-if="footer[2].show">
+                            <router-link to="/">
+                                關於我們
+                            </router-link>
+                            <router-link to="/">
+                                最新消息
+                            </router-link>
+                            <router-link to="/">
+                                客服中心
+                            </router-link>
+                            <router-link to="/">
+                                常見問題
+                            </router-link>
+                        </div>
+                    </transition>
+                </div>
+                <div class="content-container">
+                    <div class="content row">
+                        <p class="title">
+                            跟著我們
+                        </p>
+                        <img src="../../../public/img/footer_icon-1.png" alt="">
+                        <img src="../../../public/img/footer_icon-2.png" alt="">
+                        <img src="../../../public/img/footer_icon-3.png" alt="">
+                        <img src="../../../public/img/footer_icon-4.png" alt="">
+                    </div>
+                    <div class="visa">
+                        <img src="../../../public/img/footer_icon-5.jpg" alt="">
+                        <img src="../../../public/img/footer_icon-6.jpg" alt="">
+                    </div>
+                </div>
+                <p class="copy">
+                    台灣 Copyright &copy 2021 Exustar Enterprise Co. Ltd.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
