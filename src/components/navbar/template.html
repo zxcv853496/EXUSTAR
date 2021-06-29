@@ -27,7 +27,7 @@
         </div>
         <!-- mobile -->
         <div class="mid-container" :class="mb_menu" v-if="mb_menu.mb">
-            <div class="cover" @click="mbMenuActive"></div>
+            <div class="cover" @click="mbCloseMenuActive"></div>
             <div class="content-container"
             :class="{active:mb_menu.mb_active}">
                 <div class="sub-content-container"
@@ -78,9 +78,11 @@
                                                     <p class="title">
                                                         {{list.title}}
                                                     </p>
+                                                    <div class="list-a-container">
                                                     <router-link to="/" class="sub-content" v-for="list_content in list.content" :key="list_content.index"">
                                                         {{ list_content }}
                                                     </router-link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,13 +97,10 @@
                                 最新消息
                             </router-link>
                             <router-link to="/">
-                                關於我們
+                                尺寸與材質
                             </router-link>
                             <router-link to="/">
-                                尺寸表
-                            </router-link>
-                            <router-link to="/">
-                                客服中心
+                                購物說明
                             </router-link>
                             <router-link to="/">
                                 常見問題
@@ -145,7 +144,7 @@
                 <div class="list"
                 :class="{active: activeindex === item_index}">
                     <div class="list-container">
-                        <div class="list-conten"
+                        <div class="list-content"
                         v-for="list in item.list"
                         :key="list.index">
                             <p class="title">{{list.title}}</p>

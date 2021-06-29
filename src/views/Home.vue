@@ -27,7 +27,7 @@
     <div class="section2">
       <div class="video-container">
         <div class="video-banner">
-          <div  id="Player" keep-alive></div>
+          <div  id="Player"></div>
         </div>
         <div class="cover top"></div>
         <div class="cover bottom"></div>
@@ -40,7 +40,7 @@
           <img :src="item.img" alt="">
           <div class="sub-content">
             <p>{{item.content}}</p>
-            <button>新品上市</button>
+            <button>更多</button>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         <div class="content">
           <p>新品到貨</p>
           <h4>EXUSTAR STILL</h4>
-          <button>新品上市</button>
+          <button>更多</button>
         </div>
       </div>
     </div>
@@ -147,6 +147,10 @@ export default {
     }
   },
   methods:{
+    playVideo(){
+      console.log('播放')
+      document.getElementById('Player').play()
+    }
   }
 }
 </script>

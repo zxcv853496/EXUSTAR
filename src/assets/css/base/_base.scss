@@ -3,15 +3,17 @@
 
 
 .a_btn{
-    background-color: #cfcfcf;
+    background-color: #ffffff;
     border: none;
     color: black;
-    padding: 15px 25px;
+    padding: 8px;
     border-radius: 30px;
     font-size: 18px;
-    width: 135px;
-    @media (max-width:768px) {
-        padding: 10px 15px;
+    width: 95px;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+        background-color: #cfcfcf;
     }
 }
 

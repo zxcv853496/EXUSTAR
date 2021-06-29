@@ -7,6 +7,9 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        @media (max-width:992px) {
+            flex-direction: column;
+        }
         @media (max-width:576px) {
             width: 85%;
         }
@@ -32,9 +35,23 @@
                     }
                 }
             }
+            @media (max-width:992px) {
+                width: 100%;
+                .content-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .content{
+                        border: 1px solid #d6d6d6;
+                    }
+                }
+            }
         }
         .right{
             width: 75%;
+            @media (max-width:992px) {
+                margin-top: 20px;
+                width: 100%;
+            }
             hr{
                 border: none;
                 height: 1px;
@@ -44,17 +61,71 @@
             .content-container{
                 font-size: 18px;
                 .content{
-                    margin: 20px 0;
+                    margin: 30px 0;
                     display: flex;
                     align-items: center;
-                    span{
-                        width: 15%;
+                    flex-wrap: wrap;
+                    .gray{
+                        color: #c2c2c2;
                     }
-                    >span:nth-child(1){
+                    .sub-title{
+                        width: 15%;
+                        @media (max-width:1200px) {
+                            width: 18%;
+                        }
+                        @media (max-width:768px) {
+                            width: 97%;
+                            &.mb-10{
+                                margin-bottom: 10px;
+                            }
+                            &.w-35{
+                                width: 35%;
+                            }
+                        }
+                    }
+                    .red{
                         color: red;
                         width: auto;
                     }
-                    label{
+                    .input{
+                        background-color: #f6f6f6;
+                        flex-grow: 1;
+                        padding: 10px;
+                        border: 1px solid #e5e5e5;
+                    }
+                    .select-container{
+                        display: flex;
+                        select{
+                            height: 41px;
+                            margin-right: 10px;
+                            @media (max-width:576px) {
+                                &:nth-child(3){
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                    &.address{
+                        .grow{
+                            flex-grow: 1;
+
+                        }
+                    }
+                    &.number{
+                        .sub-container{
+                            display: flex;
+                            flex-grow: 1;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            input{
+                                flex-grow: 1;
+                                margin-right: 10px;
+                            }
+                            button{
+                                border: none;
+                                background-color: transparent;
+                            }
+                        }
                     }
                     &.connection{
                         label{
@@ -63,8 +134,20 @@
                             padding: 10px;
                             border: 1px solid #e5e5e5;
                         }
+                        input{
+                            background-color: #f6f6f6;
+                            flex-grow: 1;
+                            padding: 10px;
+                            border: 1px solid #e5e5e5;
+                        }
                     }
                     &.radio{
+                        .sub-title{
+                            margin-left: 8.4px;
+                            @media (max-width:768px) {
+                                margin-left: 0;
+                            }
+                        }
                         .radio-container{
                             span{
                                 margin-right: 10px;
@@ -81,6 +164,28 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+            .button-container{
+                width: 100%;
+                margin-top: 60px;
+                display: flex;
+                button{
+                    display: block;
+                    margin: 0 auto;
+                    width: 125px;
+                    height: 50px;
+                    padding: 10px 5px;
+                    border-radius: 5px;
+                    background-color: white;
+                    border: 1px solid #444444;
+                    cursor: pointer;
+                    color: black;
+                    text-align: center;
+                    &:hover{
+                        background-color: #444444;
+                        color: white;
                     }
                 }
             }

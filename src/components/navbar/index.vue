@@ -113,6 +113,14 @@ export default {
                               '展示架',
                           ]
                       },
+                      {
+                          title:'工具集',
+                          content:[
+                              '工具集1',
+                              '工具集2',
+                              '工具集3',
+                          ]
+                      },
                   ]
               },
               {
@@ -191,6 +199,14 @@ export default {
                               '自行車健身機',
                               '腳測量',
                               '展示架',
+                          ]
+                      },
+                      {
+                          title:'工具集',
+                          content:[
+                              '工具集1',
+                              '工具集2',
+                              '工具集3',
                           ]
                       },
                   ]
@@ -273,6 +289,14 @@ export default {
                               '展示架',
                           ]
                       },
+                      {
+                          title:'工具集',
+                          content:[
+                              '工具集1',
+                              '工具集2',
+                              '工具集3',
+                          ]
+                      },
                   ]
               },
               {
@@ -351,6 +375,14 @@ export default {
                               '自行車健身機',
                               '腳測量',
                               '展示架',
+                          ]
+                      },
+                      {
+                          title:'工具集',
+                          content:[
+                              '工具集1',
+                              '工具集2',
+                              '工具集3',
                           ]
                       },
                   ]
@@ -433,6 +465,14 @@ export default {
                               '展示架',
                           ]
                       },
+                      {
+                          title:'工具集',
+                          content:[
+                              '工具集1',
+                              '工具集2',
+                              '工具集3',
+                          ]
+                      },
                   ]
               },
           ]
@@ -472,7 +512,12 @@ export default {
     //mobile  //.
 
     mbMenuActive(){   
-        this.mb_menu.mb_active =! this.mb_menu.mb_active
+        this.mb_menu.mb_active = true
+        document.querySelector('body').setAttribute('style', 'overflow:hidden')
+    },
+    mbCloseMenuActive(){   
+        this.mb_menu.mb_active = false
+        document.querySelector('body').setAttribute('style', 'overflow:visible')
     },
     subContentMove(){
             this.sub_content = true

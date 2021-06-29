@@ -33,9 +33,11 @@ export default {
     activeLogin(){
       console.log(this.active_login)
       this.active_login = true
+      document.querySelector('body').setAttribute('style', 'overflow:hidden')
     },
     closeLogin(){
       this.active_login = false
+      document.querySelector('body').setAttribute('style', 'overflow:visible')
     },
     goTop(){
         document.documentElement.scrollTop = 0;
